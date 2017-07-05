@@ -17,6 +17,8 @@
     },
     "github_repository": {
         "owner": "klappy",
-        "name": "electron-forge"
+        "name": "electron-forge",
+        "draft": "true",
+        "prerelease": "true"
     }
 }
