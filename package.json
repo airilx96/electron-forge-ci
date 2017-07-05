@@ -8,7 +8,7 @@
         "start": "electron-forge start",
         "package": "electron-forge package",
         "make": "electron-forge make",
-        "lint": "echo \"No linting configured\""
+        "update-version": "node ./scripts/updateVersion.js"
     },
     "keywords": [],
     "author": "klappy",
@@ -28,6 +28,7 @@
         "babel-plugin-transform-es2015-classes": "^6.24.1",
         "babel-preset-env": "^1.6.0",
         "babel-preset-react": "^6.24.1",
-        "electron-prebuilt-compile": "1.6.11"
+        "electron-prebuilt-compile": "1.6.11",
+        "eslint-config-airbnb": "^15.0.2"
     }
 }
