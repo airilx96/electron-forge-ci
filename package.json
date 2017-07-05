@@ -31,15 +31,9 @@
             "electronWinstallerConfig": {
                 "name": "electron_forge"
             },
-            "electronInstallerDebian": {},
-            "electronInstallerRedhat": {},
             "github_repository": {
-                "owner": "",
-                "name": ""
-            },
-            "windowsStoreConfig": {
-                "packageName": "",
-                "name": "electronforge"
+                "owner": "klappy",
+                "name": "electron-forge"
             }
         }
     },
