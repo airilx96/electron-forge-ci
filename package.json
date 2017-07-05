@@ -14,28 +14,7 @@
     "author": "klappy",
     "license": "MIT",
     "config": {
-        "forge": {
-            "make_targets": {
-                "win32": [
-                    "squirrel"
-                ],
-                "darwin": [
-                    "dmg"
-                ],
-                "linux": [
-                    "deb",
-                    "rpm"
-                ]
-            },
-            "electronPackagerConfig": {},
-            "electronWinstallerConfig": {
-                "name": "electron_forge"
-            },
-            "github_repository": {
-                "owner": "klappy",
-                "name": "electron-forge"
-            }
-        }
+        "forge": "./.forge.config.json"
     },
     "dependencies": {
         "electron-compile": "^6.4.1",
