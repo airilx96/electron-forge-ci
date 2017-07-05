@@ -3,3 +3,11 @@ node_js: node
 cache:
   directories:
     - "node_modules"
+deploy:
+  provider: releases
+  overwrite: true
+  file_glob: true
+  file: out/make/*
+  skip_cleanup: true
+  on:
+    tags: true
