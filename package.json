@@ -12,7 +12,8 @@
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "update-version": "node ./scripts/updateVersion.js"
+    "update-version": "node ./scripts/updateVersion.js",
+    "test": "mocha"
   },
   "keywords": [],
   "author": "klappy",
@@ -33,6 +34,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "electron-prebuilt-compile": "1.6.11",
-    "eslint-config-airbnb": "^15.0.2"
+    "eslint-config-airbnb": "^15.0.2",
+    "mocha": "^3.4.2"
   }
 }
