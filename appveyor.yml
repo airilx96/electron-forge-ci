@@ -17,12 +17,15 @@ test_script:
   - npm test                        # run tests
 before_deploy:
   - npm run make                    # Script to package/compile
+artifacts:
+  - path: out\make\*                # upload all files in ./out/make
+    name: make_targets
 # Deploy settings
 deploy:
   release: electron-forge-v$(appveyor_build_version)
   description: 'Release description'
   provider: GitHub
-  artifact: out\make\*            # upload all files in ./out/make
+  artifacts: make_targets
   draft: true
   prerelease: true
   auth_token:                      # provide the github personal access token in appveyor settings and view the export yml
