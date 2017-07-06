@@ -1,4 +1,8 @@
 version: "{build}"
+# Platforms to test/build on
+platform:
+  - x86
+  - x64
 # Test against the latest version of this Node.js version
 environment:
   nodejs_version: "8"
