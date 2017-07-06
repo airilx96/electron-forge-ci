@@ -1,24 +1,24 @@
 {
-    "make_targets": {
-        "win32": [
-            "squirrel"
-        ],
-        "darwin": [
-            "dmg"
-        ],
-        "linux": [
-            "deb",
-            "rpm"
-        ]
-    },
-    "electronPackagerConfig": {},
-    "electronWinstallerConfig": {
-        "name": "electron_forge"
-    },
-    "github_repository": {
-        "owner": "klappy",
-        "name": "electron-forge",
-        "draft": "true",
-        "prerelease": "true"
-    }
+  "make_targets": {
+    "win32": [
+      "squirrel"
+    ],
+    "darwin": [
+      "dmg"
+    ],
+    "linux": [
+      "deb",
+      "rpm"
+    ]
+  },
+  "electronPackagerConfig": {},
+  "electronWinstallerConfig": {
+    "name": "electron_forge"
+  },
+  "github_repository": {
+    "owner": "klappy",
+    "name": "electron-forge",
+    "draft": "true",
+    "prerelease": "true"
+  }
 }
