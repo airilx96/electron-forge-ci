@@ -15,7 +15,7 @@ test_script:
   - node --version
   - npm --version
   - npm test                        # run tests
-before_deploy:
+after_test:                         # run build after tests
   - npm run make                    # Script to package/compile
 artifacts:
   - path: out\make\*                # upload all files in ./out/make
