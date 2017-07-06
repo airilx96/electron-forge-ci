@@ -22,7 +22,7 @@ artifacts:
     name: exe
 # Deploy settings
 deploy:
-  release: "v{version}"
+  release: v$(version)
   description: 'Release description'
   provider: GitHub
   artifacts: exe
