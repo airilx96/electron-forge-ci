@@ -22,7 +22,7 @@ artifacts:
     name: exe
 # Deploy settings
 deploy:
-  release: v$(version)
+  release: v$(appveyor_repo_tag_name)
   description: 'Release description'
   provider: GitHub
   artifacts: exe
