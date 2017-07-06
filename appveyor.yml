@@ -1,31 +1,30 @@
 version: "{build}"
-# Platforms to test/build on
-platform:
+platform:                           # Platforms to test/build on
   - x86
   - x64
-# Test against the latest version of this Node.js version
 environment:
-  nodejs_version: "8"
-# Install scripts. (runs after repo cloning)
-install:
-  # Get the latest stable version of Node.js or io.js
-  - ps: Install-Product node $env:nodejs_version
-  # install modules
-  - npm install
-  # install electron-forge cli
-  - npm install -g electron-forge@3.0.5
-# Caching
+  nodejs_version: "8"               # Test against the latest version of this Node.js version
+install:                            # Install scripts. (runs after repo cloning)
+  - ps: Install-Product node $env:nodejs_version # Get the latest stable version of Node.js or io.js
+  - npm install                     # install modules
+  - npm install -g electron-forge@3.0.5 # install electron-forge cli
 cache:
   - node_modules
-# Only build tags (we use travis-ci for tests)
-skip_non_tags: true
-# Post-install test scripts.
+skip_non_tags: true                 # Only build tags (we use travis-ci for tests)
 test_script:
-  # Output useful info for debugging.
   - node --version
   - npm --version
-  # run tests
-  - npm test
-# Script to package/compile
+  - npm test                        # run tests
 build_script:
-  - npm run make
+  - npm run make                    # Script to package/compile
+# Deploy settings
+deploy:
+  release: electron-forge-v$(appveyor_build_version)
+  description: 'Release description'
+  provider: GitHub
+  artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
+  draft: true
+  prerelease: true
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
