@@ -1,0 +1,8 @@
+version: {build}
+platform:
+  - x64
+cache:
+  - node_modules
+skip_non_tags: true
+build_script:
+  - npm run make
