@@ -18,7 +18,7 @@ test_script:
 after_test:                         # run build after tests
   - npm run make                    # Script to package/compile
 artifacts:
-  - path: '**\*.exe'            # upload all files in ./out/make
+  - path: 'out\make\**\*.exe'            # upload all files in ./out/make
     name: exe
 # Deploy settings
 deploy:
