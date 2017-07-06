@@ -4,5 +4,7 @@ platform:
 cache:
   - node_modules
 skip_non_tags: true
+install:
+  - npm install -g electron-forge@3.0.5
 build_script:
   - npm run make
