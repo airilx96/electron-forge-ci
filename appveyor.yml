@@ -1,10 +1,27 @@
 version: "{build}"
-platform:
-  - x64
+# Test against the latest version of this Node.js version
+environment:
+  nodejs_version: "8"
+# Install scripts. (runs after repo cloning)
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node $env:nodejs_version
+  # install modules
+  - npm install
+  # install electron-forge cli
+  - npm install -g electron-forge@3.0.5
+# Caching
 cache:
   - node_modules
+# Only build tags (we use travis-ci for tests)
 skip_non_tags: true
-install:
-  - npm install -g electron-forge@3.0.5
+# Post-install test scripts.
+test_script:
+  # Output useful info for debugging.
+  - node --version
+  - npm --version
+  # run tests
+  - npm test
+# Script to package/compile
 build_script:
   - npm run make
