@@ -1,4 +1,4 @@
-version: "{build}"
+version: $(appveyor_repo_tag_name)
 build: off
 platform:                           # Platforms to test/build on
   - x86
