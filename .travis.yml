@@ -6,8 +6,8 @@ os:
 cache:
   directories:
   - node_modules
-script:
-    - npm run make
+before_deploy:
+  - npm run make
 deploy:
   provider: releases
   api_key:
