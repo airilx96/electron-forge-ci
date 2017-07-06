@@ -8,7 +8,7 @@ cache:
   - node_modules
 before_deploy:
   - npm install -g electron-forge@3.0.5
-  - npm run make
+  - electron-forge make
 deploy:
   provider: releases
   api_key:
