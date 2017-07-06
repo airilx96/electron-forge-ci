@@ -22,7 +22,7 @@ deploy:
   release: electron-forge-v$(appveyor_build_version)
   description: 'Release description'
   provider: GitHub
-  artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
+  artifact: out\make\*            # upload all files in ./out/make
   draft: true
   prerelease: true
   auth_token:                      # provide the github personal access token in appveyor settings and view the export yml
