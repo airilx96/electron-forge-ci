@@ -15,7 +15,7 @@ test_script:
   - node --version
   - npm --version
   - npm test                        # run tests
-build_script:
+before_deploy:
   - npm run make                    # Script to package/compile
 # Deploy settings
 deploy:
@@ -25,6 +25,8 @@ deploy:
   artifact: /.*\.nupkg/            # upload all NuGet packages to release assets
   draft: true
   prerelease: true
+  auth_token:                      # provide the github personal access token in appveyor settings and view the export yml
+    secure: Xjyk9DTGg6aLGwZVfuQVAKy5flL5mY0Z2xxg1ZNtA4nEAUxw7UBOHJEmkq/J+IJE
   on:
     branch: master                 # release from master branch only
     appveyor_repo_tag: true        # deploy on tag push only
