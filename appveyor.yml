@@ -22,7 +22,7 @@ artifacts:
     name: exe
 # Deploy settings
 deploy:
-  release: electron-forge-v$(appveyor_build_version)
+  release: "v{version}"
   description: 'Release description'
   provider: GitHub
   artifacts: exe
