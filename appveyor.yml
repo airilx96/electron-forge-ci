@@ -1,4 +1,4 @@
-version: $(appveyor_repo_tag_name)
+version: "{build}-{appveyor_repo_tag_name}"  # Version used in Appveyor to know this is a unique run
 build: off                          # Disables typical windows building for Visual Studio
 platform:                           # Platforms to test/build on
   - x86                             # Build for 32bit, compatible on 64bit
@@ -21,10 +21,10 @@ artifacts:                          # Add artifacts to upload
   - path: 'out\make\**\*.exe'       # upload all exe files in ./out/make
     name: exe                       # name to be used in deploy
 deploy:                             # Deploy settings
-  release: $(appveyor_repo_tag_name)  # Use the tag name 
+  release: $(appveyor_repo_tag_name)  # Use the tag name
   description: 'Release description'  # Placeholder for prepopulating release description
   provider: GitHub                  # Release to Github
-  artifacts: exe                    # Release the exe from named artifacts 
+  artifacts: exe                    # Release the exe from named artifacts
   draft: true                       # Draft release so it's not public
   prerelease: true                  # Prerelease so it's not latest
   auth_token:                       # provide the github personal access token in appveyor settings and view the export yml
