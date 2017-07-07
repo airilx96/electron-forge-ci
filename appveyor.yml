@@ -1,4 +1,4 @@
-version: "{build}-{appveyor_repo_tag_name}"  # Version used in Appveyor to know this is a unique run
+version: "{branch}-{build}"  # Version used in Appveyor to know this is a unique run
 build: off                          # Disables typical windows building for Visual Studio
 platform:                           # Platforms to test/build on
   - x86                             # Build for 32bit, compatible on 64bit
