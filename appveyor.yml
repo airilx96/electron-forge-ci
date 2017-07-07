@@ -17,9 +17,9 @@ test_script:
   - npm test                        # run tests
 after_test:                         # run build after tests
   - npm run make                    # Script to package/compile
-artifacts:
-  - path: 'out\make\**\*.exe'       # upload all files in ./out/make
-    name: exe
+artifacts:                          # Add artifacts to upload
+  - path: 'out\make\**\*.exe'       # upload all exe files in ./out/make
+    name: exe                       # name to be used in deploy
 deploy:                             # Deploy settings
   release: $(appveyor_repo_tag_name)  # Use the tag name 
   description: 'Release description'  # Placeholder for prepopulating release description
