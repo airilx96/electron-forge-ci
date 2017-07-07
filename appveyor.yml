@@ -1,4 +1,4 @@
-version: "{build}"
+version: $(appveyor_repo_tag_name)
 build: off                          # Disables typical windows building for Visual Studio
 platform:                           # Platforms to test/build on
   - x86                             # Build for 32bit, compatible on 64bit
