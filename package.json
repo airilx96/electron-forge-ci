@@ -10,8 +10,8 @@
   },
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
+    "package": "electron-forge package ./",
+    "make": "electron-forge make ./",
     "update-version": "node ./scripts/updateVersion.js",
     "test": "mocha"
   },
