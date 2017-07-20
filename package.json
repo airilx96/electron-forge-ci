@@ -1,7 +1,7 @@
 {
   "name": "electron-forge",
   "productName": "electron-forge",
-  "version": "1.0.43",
+  "version": "0.7.1-beta.37",
   "description": "My Electron application description",
   "main": "src/index.js",
   "repository": {
