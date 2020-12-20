@@ -20,7 +20,7 @@ deploy:                     # Configuration for releases
   skip_cleanup: true        # Don't wait to cleanup
   prerelease: true          # Don't make this the latest release, mark it as prerelease
   draft: true               # Don't publish this to the public, make it a draft
-  on:                       # Tell it when to deploy/release
-    tags: true              # We only create a release on tags
+  #on:                       # Tell it when to deploy/release
+  #  tags: true              # We only create a release on tags
   api_key:                  # Github personal access token encrypted with travis encrypt command
    secure: GH_TOKEN

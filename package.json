@@ -1,40 +1,40 @@
 {
-  "name": "electron-forge",
-  "productName": "electron-forge",
-  "version": "1.0.44",
-  "description": "My Electron application description",
-  "main": "src/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/klappy/electron-forge.git"
-  },
-  "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package ./",
-    "make": "electron-forge make ./",
-    "update-version": "node ./scripts/updateVersion.js",
-    "test": "mocha"
-  },
-  "keywords": [],
-  "author": "klappy",
-  "license": "MIT",
-  "config": {
-    "forge": "./.forge.config.json"
-  },
-  "dependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-plugin-transform-es2015-classes": "^6.24.1",
-    "babel-preset-env": "^1.6.0",
-    "babel-preset-react": "^6.24.1",
-    "electron-compile": "^6.4.1",
-    "electron-devtools-installer": "^2.2.0",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-hot-loader": "^3.0.0-beta.7"
-  },
-  "devDependencies": {
-    "electron-prebuilt-compile": "1.6.11",
-    "eslint-config-airbnb": "^15.0.2",
-    "mocha": "^3.4.2"
-  }
+    "name": "electron-forge",
+    "productName": "electron-forge",
+    "version": "1.0.45",
+    "description": "My Electron application description",
+    "main": "src/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/klappy/electron-forge.git"
+    },
+    "scripts": {
+        "start": "electron-forge start",
+        "package": "electron-forge package ./",
+        "make": "electron-forge make ./",
+        "update-version": "node ./scripts/updateVersion.js",
+        "test": "mocha"
+    },
+    "keywords": [],
+    "author": "klappy",
+    "license": "MIT",
+    "config": {
+        "forge": "./.forge.config.json"
+    },
+    "dependencies": {
+        "babel-plugin-transform-async-to-generator": "^6.24.1",
+        "babel-plugin-transform-es2015-classes": "^6.24.1",
+        "babel-preset-env": "^1.6.0",
+        "babel-preset-react": "^6.24.1",
+        "electron-compile": "^6.4.1",
+        "electron-devtools-installer": "^2.2.0",
+        "react": "^15.6.1",
+        "react-dom": "^15.6.1",
+        "react-hot-loader": "^3.0.0-beta.7"
+    },
+    "devDependencies": {
+        "electron-prebuilt-compile": "1.6.11",
+        "eslint-config-airbnb": "^15.0.2",
+        "mocha": "^3.4.2"
+    }
 }
